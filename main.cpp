@@ -1,5 +1,9 @@
-#include "stdafx.h" 
 #include <iostream> 
-using namespace std; 
+#include "plus.h" 
 
-int _tmain(int argc, _TCHAR* argv[])
+int main()
+{
+	int a;
+
+	a = plus(3, 2);
+}
