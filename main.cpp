@@ -1,22 +1,56 @@
 
-#include <iostream> 
-#include "plus.h" 
+#include <iostream>
 #include "minus.h"
-#include "umn.h"
 #include "del.h"
-
+#include "umn.h"
+#include "plus.h"
 
 int main()
 {
-	int a;
+    int a, b, input, result;
 
-	a = plus(3, 2);
+	printf("Vyberite deistvie?\n");
+	printf("1. +\n");
+	printf("2. -\n");
+	printf("3. *\n");
+	printf("4. /\n");
+	printf("5. Vyhod\n");
 
-    a = minus(4, 2);
+	printf("Vash vybor: ");
+	scanf("%d", &input);
 
-	a = umn(2, 4);
+	if (input != 5) {
 
-    a = del(4, 2);
+		std::cout << "Vvedite pervoe chislo:";
+		std::cin >> a;
+		std::cout << "Vvedite vtoroe chislo:";
+		std::cin >> b;
 
+		switch (input) {
+		case 1:
+			result = plus(a, b);
+			break;
+		case 2:
+			result = minus(a, b);
+			break;
+		case 3:
+			result = umn(a, b);
+			break;
+		case 4:
+			if (b != 0)
+			{
+				result = del(a, b);
+			}
+			else
+			{
+				std::cout << "Division by zero." << std::endl;
+			}
+			break;
+		default:
+			std::cout << "Nepravilnyi vvod." << std::endl;
+		}
+
+		std::cout << "Otvet:" << result << std::endl;
+
+	}
 }
-
