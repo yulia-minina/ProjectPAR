@@ -3,6 +3,7 @@
 #include "plus.h" 
 #include "minus.h"
 #include "umn.h"
+#include "del.h"
 
 
 int main()
@@ -14,5 +15,8 @@ int main()
     a = minus(4, 2);
 
 	a = umn(2, 4);
+
+    a = del(4, 2);
+
 }
 
