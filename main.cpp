@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "minus.h"
+#include "del.h"
 
 
 int main()
@@ -10,4 +11,5 @@ int main()
     int a;
 
     a = minus(4, 2);
+    a = del(4, 2);
 }
